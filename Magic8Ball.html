@@ -9,8 +9,27 @@
 </head>
 <h1> Your Question: </h1>
 <p id ="questionPrompt"></p>
-<h2> The Magic 8 Ball's answer:</h2>
-<p id = "Answer"> </p>
+<h1> The Magic 8 Ball's answer:</h1>
+
+<script>
+  // This function (e.g., randomize_arrayElements()) is responsible for randomly generating one element from the magic_8Ball_Answers array (e.g., to produce a single answer). 
+  function randomize_arrayElements(items)
+    {
+  
+        return items[Math.floor(Math.random()*items.length)];
+     
+    }
+//console.log(randomize_arrayElements(magic_8Ball_Answers) + " \nTry again."); // Printing out a random answer to the user.
+        document.getElementById("Answer").innerHTML = randomize_arrayElements(magic_8Ball_Answers);
+  </script>
+<div id="content">
+  <div id="eight-ball" class="eight-ball">
+    <div class="answer">
+      <p id="eight">8</p>
+      <p id="Answer"></p>
+    </div>
+  </div>
+</div>
 
 <body>
     <script>
@@ -30,18 +49,8 @@
 ,"My reply is no.", "My sources say no.", "Outlook not so good.", "Outlook good."
 , "Reply hazy, try again.", "Signs point to yes.", "Very doubtful.", "Without a doubt."
 , "Yes.", "Yes – definitely.", "You may rely on it."];
-
-// This function (e.g., randomize_arrayElements()) is responsible for randomly generating one element from the magic_8Ball_Answers array (e.g., to produce a single answer). 
-    function randomize_arrayElements(items)
-    {
-  
-        return items[Math.floor(Math.random()*items.length)];
-     
-    }
-//console.log(randomize_arrayElements(magic_8Ball_Answers) + " \nTry again."); // Printing out a random answer to the user.
-        document.getElementById("Answer").innerHTML = randomize_arrayElements(magic_8Ball_Answers);
+        
     </script> 
-    <section class="stage"><figure class="ball"><span class = "shadow"></span><span class="eight"></span></figure></section>
 
     <!--Generating the three buttons for the user below using the specified customizations made.-->
     <button class="button button1 "onclick="newQuestion()">Ask a different question</button>
@@ -77,7 +86,7 @@
         }
     </script> 
 
-    <button class="button button3"onclick="newAnswer()">Get a different answer for your question</button>
+    <button class="button button1"onclick="newAnswer()">Get a different answer for your question</button>
     
     <script>
         //This function newAnswer() function once the "Get a different answer fro your question" button above is clicked will generate a new answer for the question entered by the user. 
