@@ -41,8 +41,7 @@
 //console.log(randomize_arrayElements(magic_8Ball_Answers) + " \nTry again."); // Printing out a random answer to the user.
         document.getElementById("Answer").innerHTML = randomize_arrayElements(magic_8Ball_Answers);
     </script> 
-
-    <figure class="circle"></figure>
+    <section class="stage"><figure class="ball"><span class = "shadow"></span><span class="eight"></span></figure></section>
 
     <!--Generating the three buttons for the user below using the specified customizations made.-->
     <button class="button button1 "onclick="newQuestion()">Ask a different question</button>
@@ -77,8 +76,6 @@
             document.getElementById("Answer").innerHTML = randomize_arrayElements(magic_8Ball_Answers);
         }
     </script> 
-    
-    <button class="button button2" onclick="window.close()">Exit</button> <!--Closing the program with the "Exit" button.-->
 
     <button class="button button3"onclick="newAnswer()">Get a different answer for your question</button>
     
