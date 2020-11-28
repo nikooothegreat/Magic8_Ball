@@ -77,8 +77,8 @@
             -webkit-filter: blur(10px);
           }
           .ball .eight {
-            width: 110px;
-            height: 110px;
+            width: 150px;
+            height: 150px;
             margin: 30%;
             background: white;
             border-radius: 50%;
@@ -86,7 +86,7 @@
             -moz-transform: translateX(68px) translateY(-60px) skewX(0deg) skewY(0deg);
             -ms-transform: translateX(68px) translateY(-60px) skewX(0deg) skewY(0deg);
             -o-transform: translateX(68px) translateY(-60px) skewX(0deg) skewY(0deg);
-            transform: translateX(68px) translateY(-60px) skewX(0deg) skewY(0deg);
+            transform: translateX(-10px) translateY(-10px) skewX(0deg) skewY(0deg);
             position: absolute;
           }
           .ball .eight:before {
@@ -97,9 +97,9 @@
             height: 80px;
             width: 100px;
             left: 50px;
-            margin-left: -40px;
+            margin-left: -20px;
             top: 44px;
-            margin-top: -40px;
+            margin-top: -20px;
             color: black;
             font-family: Arial;
             font-size: 90px;
