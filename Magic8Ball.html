@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--The "styles.css" file contains the customiziation the three buttons for the program (e.g., button 1: ask a different question, button 2: exit, button 3: get a different answer for your question).-->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<h1> Your Question: </h1>
+<p id ="questionPrompt"></p>
+<h2> The Magic 8 Ball's answer:</h2>
+<p id = "Answer"> </p>
+
+<body>
+    <script>
+        
+        var question = prompt("Ask a question: ")
+
+        // This if-statement will close the web page when the "close" button is clicked by the user. 
+        if(question == null)
+        {
+            window.close(); // Closing the web page. 
+        }
+
+
+        document.getElementById("questionPrompt").innerHTML = question;
+        var magic_8Ball_Answers = ["As I see it, yes.", "Ask again later." , "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again."
+,"Don't count on it." , "It is certain.", "It is decidedly so." ,"Most likely."
+,"My reply is no.", "My sources say no.", "Outlook not so good.", "Outlook good."
+, "Reply hazy, try again.", "Signs point to yes.", "Very doubtful.", "Without a doubt."
+, "Yes.", "Yes – definitely.", "You may rely on it."];
+
+// This function (e.g., randomize_arrayElements()) is responsible for randomly generating one element from the magic_8Ball_Answers array (e.g., to produce a single answer). 
+    function randomize_arrayElements(items)
+    {
+  
+        return items[Math.floor(Math.random()*items.length)];
+     
+    }
+//console.log(randomize_arrayElements(magic_8Ball_Answers) + " \nTry again."); // Printing out a random answer to the user.
+        document.getElementById("Answer").innerHTML = randomize_arrayElements(magic_8Ball_Answers);
+    </script> 
+
+    <figure class="circle"></figure>
+
+    <!--Generating the three buttons for the user below using the specified customizations made.-->
+    <button class="button button1 "onclick="newQuestion()">Ask a different question</button>
+    <script>
+        //This function newQuestion() function once the "Ask a different question" button above is clicked will generate a new question prompt window for the user to ask a new question. 
+        function newQuestion()
+        {
+            var question = prompt("Ask a new question: ")
+
+            // This if-statement will close the web page when the "close" button is clicked by the user. 
+            if(question == null)
+            {
+                window.close(); // Closing the web page. 
+            }
+
+
+            document.getElementById("questionPrompt").innerHTML = question;
+            var magic_8Ball_Answers = ["As I see it, yes.", "Ask again later." , "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again."
+            ,"Don't count on it." , "It is certain.", "It is decidedly so." ,"Most likely."
+            ,"My reply is no.", "My sources say no.", "Outlook not so good.", "Outlook good."
+            , "Reply hazy, try again.", "Signs point to yes.", "Very doubtful.", "Without a doubt."
+            , "Yes.", "Yes – definitely.", "You may rely on it."];
+
+            // This function (e.g., randomize_arrayElements()) is responsible for randomly generating one element from the magic_8Ball_Answers array (e.g., to produce a single answer). 
+            function randomize_arrayElements(items)
+            {
+  
+                return items[Math.floor(Math.random()*items.length)];
+     
+            }
+            //console.log(randomize_arrayElements(magic_8Ball_Answers) + " \nTry again."); // Printing out a random answer to the user.
+            document.getElementById("Answer").innerHTML = randomize_arrayElements(magic_8Ball_Answers);
+        }
+    </script> 
+    
+    <button class="button button2" onclick="window.close()">Exit</button> <!--Closing the program with the "Exit" button.-->
+
+    <button class="button button3"onclick="newAnswer()">Get a different answer for your question</button>
+    
+    <script>
+        //This function newAnswer() function once the "Get a different answer fro your question" button above is clicked will generate a new answer for the question entered by the user. 
+        function newAnswer()
+        {
+            document.getElementById("questionPrompt").innerHTML = question;
+            var magic_8Ball_Answers = ["As I see it, yes.", "Ask again later." , "Better not tell you now.", "Cannot predict now.", "Concentrate and ask again."
+            ,"Don't count on it." , "It is certain.", "It is decidedly so." ,"Most likely."
+            ,"My reply is no.", "My sources say no.", "Outlook not so good.", "Outlook good."
+            , "Reply hazy, try again.", "Signs point to yes.", "Very doubtful.", "Without a doubt."
+            , "Yes.", "Yes – definitely.", "You may rely on it."];
+
+            // This function (e.g., randomize_arrayElements()) is responsible for randomly generating one element from the magic_8Ball_Answers array (e.g., to produce a single answer). 
+            function randomize_arrayElements(items)
+            {
+  
+                return items[Math.floor(Math.random()*items.length)];
+     
+            }
+            //console.log(randomize_arrayElements(magic_8Ball_Answers) + " \nTry again."); // Printing out a random answer to the user.
+            document.getElementById("Answer").innerHTML = randomize_arrayElements(magic_8Ball_Answers);
+        }
+    </script> 
+
+</body>
+</html>
