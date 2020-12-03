@@ -10,28 +10,13 @@
 <h1> Your Question: </h1>
 <p id ="questionPrompt"></p>
 <h1> The Magic 8 Ball's answer:</h1>
-
-<script>
-  // This function (e.g., randomize_arrayElements()) is responsible for randomly generating one element from the magic_8Ball_Answers array (e.g., to produce a single answer). 
-  function randomize_arrayElements(items)
-    {
-  
-        return items[Math.floor(Math.random()*items.length)];
-     
-    }
-//console.log(randomize_arrayElements(magic_8Ball_Answers) + " \nTry again."); // Printing out a random answer to the user.
-        document.getElementById("Answer").innerHTML = randomize_arrayElements(magic_8Ball_Answers);
-  </script>
-<div id="content">
-  <div id="eight-ball" class="eight-ball">
-    <div class="answer">
-      <p id="eight">8</p>
-      <p id="Answer"></p>
-    </div>
-  </div>
+<div class ="circle">
+    <p id = "Answer"> </p>
 </div>
 
+
 <body>
+
     <script>
         
         var question = prompt("Ask a question: ")
@@ -49,6 +34,16 @@
 ,"My reply is no.", "My sources say no.", "Outlook not so good.", "Outlook good."
 , "Reply hazy, try again.", "Signs point to yes.", "Very doubtful.", "Without a doubt."
 , "Yes.", "Yes – definitely.", "You may rely on it."];
+
+// This function (e.g., randomize_arrayElements()) is responsible for randomly generating one element from the magic_8Ball_Answers array (e.g., to produce a single answer). 
+function randomize_arrayElements(items)
+    {
+  
+        return items[Math.floor(Math.random()*items.length)];
+     
+    }
+//console.log(randomize_arrayElements(magic_8Ball_Answers) + " \nTry again."); // Printing out a random answer to the user.
+        document.getElementById("Answer").innerHTML = randomize_arrayElements(magic_8Ball_Answers);
         
     </script> 
 
