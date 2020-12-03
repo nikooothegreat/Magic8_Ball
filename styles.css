@@ -27,16 +27,34 @@
           color: white;
         }
     
-         .circle 
-         {
+
+        #circle {
+          background-color:black;
+          color:white;
           width: 500px;
           height: 500px;
-          line-height: 500px;
-          border-radius: 50%;
-          font-size: 50px;
-          color: #fff;
-          text-align: center;
-          background: #000
-        }
+          border-radius:50%; 
+          display: flex;
+          align-items: center;
+      }
+      div.innercircle {
+          background-color: #0763e5;
+          color: black;
+          width: 200px;
+          height: 200px; 
+          text-align:center;
+          border-radius:50%;
+          margin: 0 auto;
+           } 
+
+           p#Answer {
+            padding: 23px;
+            color: white;
+            letter-spacing: 2px;
+            font-size:23px;
+          }
+
+
+
 
        
