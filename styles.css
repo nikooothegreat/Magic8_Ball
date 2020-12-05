@@ -53,6 +53,10 @@
             letter-spacing: 2px;
             font-size:23px;
           }
+        body {
+  background-image: linear-gradient(to right,#9795EF ,#F9C5D1);
+
+}
 
 
 
